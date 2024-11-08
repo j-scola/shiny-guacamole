@@ -1,4 +1,4 @@
-/* Resetting default styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,92 +6,117 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: 'Raleway', sans-serif;
+  color: #202124; /* Dark navy for main text */
+  background-color: #f8f9fa; /* Light gray background */
   line-height: 1.6;
-  background-color: #f8f9fa;
 }
 
-/* General Section Styling */
+/* General Styling */
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 h1, h2 {
   margin-bottom: 20px;
+  color: #1a73e8; /* Primary blue for headings */
 }
 
-/* Header Section Styles */
+p, .project-card p, .skill-card p {
+  color: #5f6368; /* Neutral gray for secondary text */
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+/* Header Section */
 #home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: #fff;
-  background-color: #005f73;
-  padding: 100px 20px;
+  background-color: #1a73e8; /* Primary blue */
+  color: #ffffff;
 }
 
-/* Styling for Main Heading in Header */
 #home h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
+  font-size: 2.8em;
+  color: #dbe2ef; /* Light neutral for contrast */
 }
 
-/* Different color for the name to make it stand out */
 #home h1 span {
-  color: #ffd60a;
+  color: #fbbc05; /* Soft yellow for highlighted text */
 }
 
-/* Subheading Styling */
 #home p {
-  font-size: 1.2em;
-  color: #e1e5ea;
+  font-size: 1.1em;
+  color: #dbe2ef; /* Light neutral for contrast */
   max-width: 600px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-/* Scroll Button Styling */
-.scroll-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
+/* Button Styles */
+.scroll-btn, .btn, .contact-form .btn {
+  padding: 12px 25px;
   font-size: 1em;
   font-weight: bold;
-  color: #fff;
-  background-color: #005f73;
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-btn {
+  margin-top: 25px;
+  background-color: #34a853; /* Accent green */
 }
 
 .scroll-btn:hover {
-  background-color: #007ea7;
+  background-color: #2e944a; /* Darker green on hover */
   transform: scale(1.05);
 }
 
-.scroll-btn:focus {
-  outline: none;
+.btn {
+  background-color: #1a73e8; /* Primary blue */
 }
 
+.btn:hover, .project-links .btn:hover {
+  background-color: #1765cc; /* Darker blue on hover */
+}
 
-/* Section Layouts for Projects and Skills */
+.contact-form .btn {
+  background-color: #34a853; /* Accent green */
+}
+
+.contact-form .btn:hover {
+  background-color: #2e944a;
+}
+
+.project-links .btn {
+  padding: 10px 15px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Project and Skills Sections */
 .projects-grid, .skills-grid {
   display: grid;
   gap: 20px;
 }
 
-/* Individual Card Styling */
 .project-card, .skill-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
   transition: transform 0.3s ease;
 }
 
@@ -99,52 +124,21 @@ h1, h2 {
   transform: translateY(-5px);
 }
 
-/* Heading in Cards */
 .project-card h3, .skill-card h3 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #1a73e8;
+  margin-bottom: 15px;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: #005f73;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #007ea7;
-}
-
-/* Contact Me Section Styles */
+/* Contact Section */
 #contact {
-  background-color: #f9fafb;
-  padding: 60px 20px;
-  color: #333;
-  text-align: center;
+  background-color: #f8f9fa;
 }
 
 #contact h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2.2em;
 }
 
-#contact p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  color: #555;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-/* Form Layout and Styles */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -153,102 +147,20 @@ h1, h2 {
   gap: 20px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
 .form-group label {
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #555;
+  font-weight: 600;
+  color: #202124;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
   padding: 12px 15px;
   font-size: 1em;
   border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-/* Project Showcase Section */
-#projects {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#projects h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.projects-grid {
-  display: grid;
-  gap: 20px;
-}
-
-.project-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.project-card h3 {
-  font-size: 1.4em;
-  margin-top: 15px;
-}
-
-.project-card p {
-  font-size: 1em;
-  color: #555;
-  margin: 10px 0;
-}
-
-.project-links {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.project-links .btn {
-  padding: 10px 15px;
-  background-color: #005f73;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.project-links .btn:hover {
-  background-color: #007ea7;
+  border-radius: 5px;
 }
 
 /* Responsive Layout */
 @media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Responsive Grid Layouts */
-@media (min-width: 768px) {
   .projects-grid, .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -260,13 +172,7 @@ h1, h2 {
   }
 }
 
-/* Smooth Fade-in Animation for Section Appearance */
-.section {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s ease forwards;
-}
-
+/* Fade-in Animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
