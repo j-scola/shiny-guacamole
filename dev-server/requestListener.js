@@ -1,8 +1,9 @@
 const fsPromises = require("fs").promises;
 const fileNotPresent = require("./errorHandlers").fileNotPresent;
 const requestUrlNotSupported = require("./errorHandlers").requestUrlNotSupported;
+const path = require("path");
 
-const pathToApp = __dirname + "/../app/";
+const pathToApp = path.__dirname + "/../app/";
 
 module.exports = {
   requestListener: function (req, res) {
