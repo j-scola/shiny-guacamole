@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "a career advancement site",
+  "main": "index.js",
+  "repository": "git@github.com:j-scola/shiny-guacamole.git",
+  "author": "James Scolamieri <james.scolamieri@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  }
+}

@@ -1,48 +1,202 @@
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   color: #333;
-  margin: 0;
+  line-height: 1.6;
+  background-color: #f8f9fa;
 }
 
-section {
-  padding: 20px;
-}
-
-#home {
-  background: #0073e6;
-  color: #fff;
+/* General Section Styling */
+.section {
+  padding: 60px 20px;
   text-align: center;
-  padding: 100px 20px;
-}
-
-#projects, #skills {
-  background: #f4f4f4;
 }
 
 h1, h2 {
+  margin-bottom: 20px;
+}
+
+/* Header Section Styles */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  background-color: #005f73;
+  padding: 100px 20px;
+}
+
+/* Styling for Main Heading in Header */
+#home h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
   margin-bottom: 10px;
 }
 
-.project {
-  margin-bottom: 15px;
+/* Different color for the name to make it stand out */
+#home h1 span {
+  color: #ffd60a;
 }
 
-form label {
-  display: block;
+/* Subheading Styling */
+#home p {
+  font-size: 1.2em;
+  color: #e1e5ea;
+  max-width: 600px;
   margin-top: 10px;
 }
 
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+/* Scroll Button Styling */
+.scroll-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #005f73;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-button {
-  background: #0073e6;
+.scroll-btn:hover {
+  background-color: #007ea7;
+  transform: scale(1.05);
+}
+
+.scroll-btn:focus {
+  outline: none;
+}
+
+
+/* Section Layouts for Projects and Skills */
+.projects-grid, .skills-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Individual Card Styling */
+.project-card, .skill-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover, .skill-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading in Cards */
+.project-card h3, .skill-card h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #005f73;
   color: #fff;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #007ea7;
+}
+
+/* Contact Me Section Styles */
+#contact {
+  background-color: #f9fafb;
+  padding: 60px 20px;
+  color: #333;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Form Layout and Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+/* Responsive Grid Layouts */
+@media (min-width: 768px) {
+  .projects-grid, .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-grid, .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Smooth Fade-in Animation for Section Appearance */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -3,54 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Portfolio</title>
+  <title>James Scolamieri - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Home Section -->
-  <section id="home">
-    <h1>Hello, I'm [Your Name]</h1>
+  <section id="home" class="section">
+    <h1>Hello, I'm <span>James Scolamieri</span></h1>
     <p>Software Engineer specializing in web development</p>
+    <button class="scroll-btn" onclick="scrollToContent()">Learn More</button>
   </section>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>Brief paragraph about your background, experience, and skills.</p>
+    <p>With over four years of professional frontend software development experience, I am an expert in building and maintaining beautiful and performant web applications that simply feel good to use.</p>
+    <h3>Fin Tech</h3>
+    <p>I have worked on an enterprise banking application.</p>
+    <h3>Product Management</h3>
+    <p>I led engineering initiatives in a product role.</p>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
+  <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>Description of the project. <a href="link-to-project">Live Demo</a> | <a href="link-to-code">Code</a></p>
-    </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>Description of the project. <a href="link-to-project">Live Demo</a> | <a href="link-to-code">Code</a></p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Description of the project.</p>
+        <a href="link-to-project" class="btn">Live Demo</a>
+        <a href="link-to-code" class="btn">Code</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Description of the project.</p>
+        <a href="link-to-project" class="btn">Live Demo</a>
+        <a href="link-to-code" class="btn">Code</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Description of the project.</p>
+        <a href="link-to-project" class="btn">Live Demo</a>
+        <a href="link-to-code" class="btn">Code</a>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
+  <section id="skills" class="section">
     <h2>Skills</h2>
-    <ul>
-      <li>Front-End: HTML, CSS, JavaScript, React</li>
-      <li>Back-End: Node.js, Express, MongoDB</li>
-      <li>Other: Git, Docker, CI/CD</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Front-End</h3>
+        <p>HTML, CSS, JavaScript, React, Lit-Element, Vue, Angular</p>
+      </div>
+      <div class="skill-card">
+        <h3>Back-End</h3>
+        <p>Node.js, Express, MongoDB, MySQL, Python, Django, Flask</p>
+      </div>
+      <div class="skill-card">
+        <h3>Other</h3>
+        <p>Git, NPM, Yarn, Docker, CI/CD</p>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact Me</h2>
-    <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Send</button>
+    <p>If you’d like to get in touch, please fill out the form below. I look forward to hearing from you!</p>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
