@@ -173,6 +173,79 @@ h1, h2 {
   border-radius: 4px;
 }
 
+/* Project Showcase Section */
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.project-card h3 {
+  font-size: 1.4em;
+  margin-top: 15px;
+}
+
+.project-card p {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.project-links .btn {
+  padding: 10px 15px;
+  background-color: #005f73;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project-links .btn:hover {
+  background-color: #007ea7;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /* Responsive Grid Layouts */
 @media (min-width: 768px) {

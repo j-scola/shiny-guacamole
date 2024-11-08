@@ -2,12 +2,14 @@ const fsPromises = require("fs").promises;
 const fileNotPresent = require("./errorHandlers").fileNotPresent;
 const requestUrlNotSupported = require("./errorHandlers").requestUrlNotSupported;
 
+const pathToApp = __dirname + "/../app/";
+
 module.exports = {
   requestListener: function (req, res) {
     switch (req.url) {
       case "/":
         fsPromises
-          .readFile(__dirname + "/../index.html")
+          .readFile(pathToApp + "index.html")
           .then((contents) => {
             res.setHeader("Content-Type", "text/html");
             res.writeHead(200);
@@ -15,9 +17,9 @@ module.exports = {
           })
           .catch((e) => fileNotPresent(e, res));
         break;
-      case "/styles.css":
+      case "/css/styles.css":
         fsPromises
-          .readFile(__dirname + "/../styles.css")
+          .readFile(pathToApp + "css/styles.css")
           .then((contents) => {
             res.setHeader("Content-Type", "text/css");
             res.writeHead(200);
@@ -25,9 +27,9 @@ module.exports = {
           })
           .catch((e) => fileNotPresent(e, res));
         break;
-      case "/script.js":
+      case "/js/script.js":
         fsPromises
-          .readFile(__dirname + "/../script.js")
+          .readFile(pathToApp + "js/script.js")
           .then((contents) => {
             res.setHeader("Content-Type", "text/javascript");
             res.writeHead(200);

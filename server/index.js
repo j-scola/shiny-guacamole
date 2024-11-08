@@ -1,5 +1,5 @@
 const http = require('http');
-const requestListener = require('./server/requestListener.js').requestListener;
+const requestListener = require('./requestListener.js').requestListener;
 
 const host = 'localhost';
 const port = 8000;
