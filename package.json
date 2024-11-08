@@ -7,10 +7,16 @@
   "author": "James Scolamieri <james.scolamieri@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^9.14.0",
+    "live-server": "^1.2.2",
     "nodemon": "^3.1.7"
   },
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "globals": "^15.12.0"
   }
 }
