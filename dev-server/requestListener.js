@@ -1,9 +1,9 @@
 const fsPromises = require("fs").promises;
 const fileNotPresent = require("./errorHandlers").fileNotPresent;
 const requestUrlNotSupported = require("./errorHandlers").requestUrlNotSupported;
-const path = require("path");
 
-const pathToApp = path.__dirname + "/../app/";
+// eslint-disable-next-line no-undef
+const pathToApp = __dirname + "/../app/";
 
 module.exports = {
   requestListener: function (req, res) {

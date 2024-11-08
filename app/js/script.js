@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 function scrollToContent() {
   document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 }
@@ -27,7 +29,3 @@ const observer = new IntersectionObserver(entries => {
 });
 
 sections.forEach(section => observer.observe(section));
-
-module.exports = {
-  scrollToContent
-};
