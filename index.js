@@ -1,1 +1,1 @@
-require('./dev-server');
+require("./server");
