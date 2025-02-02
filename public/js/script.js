@@ -36,7 +36,7 @@ sections.forEach((section) => observer.observe(section));
 const swiper = new Swiper(".mySwiper", {
   direction: "horizontal",
   loop: true,
-  speed: 1500,
+  speed: 5000,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -46,7 +46,9 @@ const swiper = new Swiper(".mySwiper", {
   },
   mousewheel: false,
   autoplay: {
-    delay: 10000,
+    delay: 1500,
     disableOnInteraction: false,
   },
+  allowSlidePrev: true,
+  allowSlideNext: true,
 });
