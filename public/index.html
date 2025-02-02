@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Scolamieri - Web Developer</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <h1>Hello! I'm <span>James Scolamieri</span></h1>
+      <p>
+        A Frontend Engineer with a knack for crafting dynamic, user-friendly web
+        applications.
+      </p>
+      <button class="scroll-btn" onclick="scrollToContent()">Learn More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I'm a Frontend Engineer with experience in creating enterprise-level
+        features for banking software, as well as designing innovative solutions
+        in startups. Passionate about front-end development, I excel in using
+        modern JavaScript frameworks like React and Vue.
+      </p>
+      <div class="about-details">
+        <h3>Frontend Software Engineer</h3>
+        <h4>2020 - present</h4>
+        <p>
+          I have over four years of profession experience as a Frontend Software
+          Engineer. The bulk of my experience has been working on a UX Team for
+          a Credit Union online banking product. My notable achievement in this
+          field are a brand new International ACH Payment Feature, standardizing
+          payment frequency tooling into a standardized reusable component, and
+          significantly increasing project automated test coverage.
+        </p>
+        <h3>Hack Reactor</h3>
+        <h4>2020</h4>
+        <p>
+          In 2020, my interest in programming let me to transition from my
+          Product Management career track to pursue a career as a software
+          engineer. I attended the Hack Reactor SF Software Engineering
+          Immersive program, a 17-week, nearly 1000-hour intensive course. This
+          program introduced me to core principles of software development, best
+          practices of modern web development, and exposure to popular web
+          development frameworks.
+        </p>
+        <h3>Product Management</h3>
+        <h4>2018 - 2020</h4>
+        <p>
+          My career in software development began as a product manager. At a
+          digital ad agency specializing in mobile growth marketing, I led a
+          team of engineers in delivering features to account managers and
+          clients. My goal in the tools I designed and worked to deliver was to
+          simplify and automate the process of initiating, monitoring and
+          optimizing an ad campaign. The bid mediation interface we built
+          reduced time-to-launch by 30%.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section id="projects" class="section">
+      <h2>Work Samples</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-card">
+              <h3>Fighting Game</h3>
+              <!-- <img src="project1-thumbnail.jpg" alt="Project 1 Thumbnail" /> -->
+              <p>
+                This 2D fighting game is built with Phaser and Vite to program
+                assets, animations, object interactions and game controls.
+                Players can move their character, jump and attack the NPC.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://fighter-friends-adventure.netlify.app"
+                  target="_blank"
+                  class="btn"
+                  >View Live Demo</a
+                >
+                <a
+                  href="https://github.com/j-scola/fighter-friends-adventure"
+                  target="_blank"
+                  class="btn"
+                  >View GitHub Repo
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-card">
+                <h3>D&D 5e Character Sheet</h3>
+                <img
+                  src="project1-thumbnail.jpg"
+                  alt="Character Sheet Project Image"
+                />
+                <p>
+                  Inspired by TTRPG applications like Roll20 and D&D Beyond, I
+                  built this web application to create and manage a D&D 5e
+                  character sheet. Built with React.js using Vite.
+                </p>
+                <div class="project-links">
+                  <a href="https://live-demo.com" target="_blank" class="btn"
+                    >View Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/j-scola/xmas-list"
+                    target="_blank"
+                    class="btn"
+                    >View GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-card">
+                <h3>Xmas List</h3>
+                <img
+                  src="project1-thumbnail.jpg"
+                  alt="Xmas List Project Image"
+                />
+                <p>
+                  An simple lightweight web application designed to convey the
+                  spirit of the holidays and inspire friends and family to give
+                  me gifts that I would like for Christmas. Built with React.js.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://james-xmas-list.netlify.app/"
+                    target="_blank"
+                    class="btn"
+                    >View Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/j-scola/xmas-list"
+                    target="_blank"
+                    class="btn"
+                    >View GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Front-End</h3>
+          <p>HTML, CSS, JavaScript, React, Lit-Element, Vue, Angular</p>
+        </div>
+        <div class="skill-card">
+          <h3>Back-End</h3>
+          <p>Node.js, Express, MongoDB, MySQL, Python, Django, Flask</p>
+        </div>
+        <div class="skill-card">
+          <h3>Other</h3>
+          <p>Git, NPM, Yarn, Docker, CI/CD</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>
+        If you’d like to get in touch, please fill out the form below. I look
+        forward to hearing from you!
+      </p>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
